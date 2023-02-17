@@ -6,11 +6,11 @@ spark = SparkSession.builder\
     .appName('PySpark_task_1')\
     .getOrCreate()
 
-csv_file = 'import_empl.csv'
+csv_file = 'import_empl_csv.csv'
 df = spark.read.csv(csv_file,
-                    sep=',',
+                    sep=';',
                     header=True
                     )
 
 
-print(df.show(3))
+print(df.show())
